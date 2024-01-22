@@ -1,38 +1,14 @@
-# DDL exercise
-Creating Tables:
-Create a table named Movies with the following columns:
-movie_id (integer)
-title (varchar, maximum length 100)
-director (varchar, maximum length 50)
-release_year (integer)
-genre (varchar, maximum length 50)
+# Exercise # 1 - List databases on a PostgreqSQL server
 
-Altering Tables:
-Alter the Movies table to add a new column named rating of type decimal(3, 1).
+> **Create a Java Application, "DatabaseLister" that connects to the PostgreqSQL database server on localhost and list out names of all databases**
 
-Dropping Tables:
-Create a new table named Students with columns:
+***Hint:*** 
+- Download JDBC Driver library for PostgreqSQL
+-- Search on internet for the above.
+- Add this to the classpath
+- Create an instance of *Connection* using *DriverManager* API
+-- Specify the URL (with default database), username and password appropriately
+- Lookup into "pg_database" table for the "datname" field.
+- Iterate through the result and gather the result/values 
+- Display the gathered values as the list of databases
 
-student_id (integer)
-student_name (varchar, maximum length 50)
-age (integer)
-grade (varchar, maximum length 2)
-Then, drop the Students table.
-
-Truncating Tables:
-Create a table named Events with columns:
-
-event_id (integer)
-event_name (varchar, maximum length 100)
-date (date)
-location (varchar, maximum length 100)
-Insert some sample data into the Events table. Once done, truncate the table to remove all records while keeping the table structure intact.
-
-Renaming Tables:
-Create a table named Restaurants with columns:
-
-restaurant_id (integer)
-name (varchar, maximum length 50)
-cuisine (varchar, maximum length 50)
-location (varchar, maximum length 100)
-Rename the table to DiningSpots.
